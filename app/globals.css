@@ -1,26 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tw-animate-css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: #FBFBFE;
+
+    --font-body: Inter, sans-serif;
+    --font-dm-sans: 'DM Sans', sans-serif;
+
+    --tracking-light: -2%;
+
+    --animate-marquee: marquee var(--duration) linear infinite;
+    --animate-marquee-vetical: marquee-vertical var(--duration) linear infinite;
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-100% - var(--gap)));
+        }
+    }
+
+    @keyframes marquee-vertical {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(calc(-100% - var(--gap)));
+        }
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer components {
+    .grid-container {
+        display: grid;
+        grid-template-columns: minmax(120px, 1fr) minmax(0, 1200px) minmax(120px, 1fr);
+    }
+
+    @media (max-width: 1280px) {
+        .grid-container {
+            grid-template-columns: minmax(80px, 1fr) minmax(0, 900px) minmax(80px, 1fr);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .grid-container {
+            grid-template-columns: minmax(60px, 1fr) minmax(0, 900px) minmax(60px, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: minmax(40px, 1fr) minmax(0, 900px) minmax(40px, 1fr);
+        }
+    }
+
+    .grid-container-large {
+        display: grid;
+        grid-template-columns: minmax(108px, 1fr) 24px minmax(0, 1176px) 24px minmax(108px, 1fr);
+    }
+
+    .grid-container-double {
+        display: grid;
+        grid-template-columns: minmax(108px, 1fr) 24px minmax(0, calc(1152px / 2)) 24px minmax(0, calc(1152px / 2)) 24px minmax(108px, 1fr);
+    }
+
+    .grid-container-quadruple {
+        display: grid;
+        grid-template-columns: minmax(108px, 1fr) 24px minmax(0, calc(1104px / 4)) 24px minmax(0, calc(1104px / 4)) 24px minmax(0, calc(1104px / 4)) 24px minmax(0, calc(1104px / 4)) 24px minmax(108px, 1fr);
+    }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+    .clip-path-promo-section {
+        clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+    }
 }
