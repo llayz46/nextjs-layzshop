@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import "@/app/globals.css";
 import {BlobSuccessLeft} from "@/src/components/BlobSuccessLeft";
+import {BlobSuccessRight} from "@/src/components/BlobSuccessRight";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -14,6 +15,7 @@ export default function SuccessLayout({ children }: Readonly<{ children: React.R
                 {children}
 
                 <BlobSuccessLeft className="absolute left-0 top-1/3" />
+                <BlobSuccessRight className="absolute right-0 top-0" />
             </body>
         </html>
     );
