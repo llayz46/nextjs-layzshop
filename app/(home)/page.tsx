@@ -58,7 +58,7 @@ export default function Home() {
                 </div>
 
                 <BlobHeroLeft className="absolute -z-10 top-10" />
-                <BlobHeroRight className="absolute -z-10 top-0 right-10" />
+                <BlobHeroRight className="absolute -z-10 -top-20 right-10" />
             </section>
 
             <section id="dashboard">

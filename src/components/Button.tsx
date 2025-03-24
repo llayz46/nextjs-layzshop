@@ -3,7 +3,7 @@ import {ReactNode} from "react";
 type ButtonProps = {
     children: ReactNode;
     variant?: "primary" | "secondary" | "black";
-    size?: "sm" | "md";
+    size?: "sm" | "md" | "lg";
     className?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -25,6 +25,7 @@ export function Button({
     const sizeClasses = {
         sm: "py-1.5",
         md: "py-2",
+        lg: "py-2.5",
     };
 
     return (
