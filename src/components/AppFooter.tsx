@@ -5,9 +5,9 @@ export function AppFooter() {
         <footer className="mx-auto max-w-300">
             <span className="block w-full h-px bg-linear-to-r/oklch from-background via-neutral-200 via-35% via-neutral-200 via-65% to-background"></span>
 
-            <div className="px-5 my-8 flex justify-between items-center">
+            <div className="px-8 md:px-5 my-8 flex max-sm:flex-col justify-between sm:items-center max-sm:gap-4">
                 <div className="max-w-xs">
-                    <span className="flex items-center gap-2 font-dm-sans font-bold tracking-[-1.5%] text-zinc-900 text-xl">
+                    <span className="flex items-center gap-2 font-dm-sans font-medium md:font-bold tracking-[-1.5%] text-zinc-900 text-xl">
                         <AppLogo />
                         LayzShop
                     </span>
