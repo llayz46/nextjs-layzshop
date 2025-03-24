@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import "../globals.css";
 import {AppHeader} from "@/src/components/AppHeader";
 import {AppFooter} from "@/src/components/AppFooter";
+import {ModalProvider} from "@/src/contexts/ModalContext";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -15,7 +16,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <div className="grid-container mb-3">
                     <span className="border-r border-neutral-200"></span>
 
-                    <AppHeader />
+                    <ModalProvider>
+                        <AppHeader />
+                    </ModalProvider>
 
                     <span className="border-l border-neutral-200"></span>
                 </div>
