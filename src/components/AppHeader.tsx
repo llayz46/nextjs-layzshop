@@ -24,7 +24,7 @@ export function AppHeader() {
 
     return (
         <header className="md:pt-8 pt-6 md:pb-4 pb-3">
-            {isScrolled || isOpen && <div className="h-14"></div>}
+            {(isScrolled || isOpen) && <div className="h-14"></div>}
 
             <motion.div
                 initial={{
