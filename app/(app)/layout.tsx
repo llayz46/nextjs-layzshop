@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html lang="en">
+        <html lang="en" className="overflow-x-hidden">
             <body className="bg-background font-body antialiased relative overflow-x-hidden">
                 <div className="grid-container mb-3">
                     <span className="border-r border-neutral-200"></span>

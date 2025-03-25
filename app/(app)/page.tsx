@@ -27,7 +27,7 @@ export default function Home() {
                 </div>
 
                 <div className="relative text-center mx-3 pt-12 border-t border-neutral-200">
-                    <span className="bg-white text-sm text-zinc-500 px-3 py-1 rounded-full shadow-md">🚀 Lancez votre boutique en un temps record</span>
+                    <span className="bg-white text-xs sm:text-sm text-zinc-500 px-3 py-1 rounded-full shadow-md">🚀 Lancez votre boutique en un temps record</span>
 
                     <h1 className="font-dm-sans font-bold text-zinc-800 text-5xl xl:text-7xl tracking-light pt-8 xl:pt-10 pb-3 xl:pb-5 max-w-3xl xl:max-w-5xl mx-auto">LayzShop :
                         La base idéale pour votre projet e-commerce</h1>
@@ -57,8 +57,8 @@ export default function Home() {
                     <EllipseSeparator place="bottom left"/>
                 </div>
 
-                <BlobHeroLeft className="absolute -z-10 top-10" />
-                <BlobHeroRight className="absolute -z-10 -top-20 right-10" />
+                <BlobHeroLeft className="max-sm:hidden absolute -z-10 top-10" />
+                <BlobHeroRight className="max-sm:hidden absolute -z-10 -top-20 right-10" />
             </section>
 
             <section id="dashboard">
@@ -202,7 +202,7 @@ export default function Home() {
                 <div className="mb-3 grid grid-cols-[minmax(41px,1fr)_minmax(0,898px)_minmax(41px,1fr)] lg:grid-cols-[minmax(81px,1fr)_minmax(0,898px)_minmax(81px,1fr)] md:grid-cols-[minmax(61px,1fr)_minmax(0,898px)_minmax(61px,1fr)] xl:grid-cols-[minmax(121px,1fr)_minmax(0,1198px)_minmax(121px,1fr)]">
                     <span className="h-30 w-px bg-gradient-to-t from-neutral-200 to-transparent ml-auto"></span>
 
-                    <div className="w-full mb-3 md:mb-5 mt-auto px-6 md:px-8 flex items-end justify-between">
+                    <div className="w-full mb-3 md:mb-5 mt-auto px-6 md:px-8 flex items-end justify-between gap-6">
                         <h3 className="text-2xl md:text-4xl text-zinc-800 font-dm-sans font-semibold tracking-light">Tendances</h3>
 
                         <a href="#" className="flex items-center gap-1 text-zinc-500 text-sm">

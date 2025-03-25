@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import {ModalHeader} from "@/src/components/ModalHeader";
 import { useModal } from "@/src/contexts/ModalContext"
+import Link from "next/link";
 
 export function AppHeader() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -45,10 +46,10 @@ export function AppHeader() {
                 className={`mx-8 flex items-center justify-between p-2.5 rounded-xl border z-50 ${isScrolled ? 'fixed top-6 left-1/2 -translate-x-1/2 z-50 shadow-md shadow-black/5' : 'relative'} ${isOpen ? 'hidden' : ''}`}
             >
                 <div className="flex items-center gap-6">
-                    <div className="flex gap-2.5 items-center">
+                    <Link href="/" className="flex gap-2.5 items-center">
                         <AppLogo/>
                         <span className="font-dm-sans text-xl font-medium text-zinc-800">LayzShop</span>
-                    </div>
+                    </Link>
 
                     <span className="hidden lg:block h-5 w-px bg-neutral-300" role="separator"></span>
 
