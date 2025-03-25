@@ -7,7 +7,7 @@ export function AppFooter() {
 
             <div className="px-8 md:px-5 my-8 flex max-sm:flex-col justify-between sm:items-center max-sm:gap-4">
                 <div className="max-w-xs">
-                    <span className="flex items-center gap-2 font-dm-sans font-medium md:font-bold tracking-[-1.5%] text-zinc-900 text-xl">
+                    <span className="flex items-center gap-2 font-dm-sans font-medium md:font-semibold tracking-[-1.5%] text-zinc-900 text-xl">
                         <AppLogo />
                         LayzShop
                     </span>
