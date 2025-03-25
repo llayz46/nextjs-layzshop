@@ -14,7 +14,7 @@ export function Button({
     className,
     ...props
 }: ButtonProps) {
-    const baseClasses = "cursor-pointer text-sm/4 px-3 shadow-md font-medium rounded-lg border transition-colors";
+    const baseClasses = "cursor-pointer text-sm/4 px-3 shadow-md shadow-black/5 font-medium rounded-lg border transition-colors";
 
     const variantClasses = {
         primary: "text-zinc-800 bg-white border-neutral-200 hover:bg-neutral-50",

@@ -262,19 +262,6 @@ export default function Home() {
 
                     <span className="h-50 w-px bg-gradient-to-b from-neutral-200 to-transparent"></span>
                 </div>
-                {/*<div className="mx-auto max-w-300 flex justify-between">*/}
-                {/*    <span className="h-50 w-px bg-gradient-to-b from-neutral-200 to-transparent"></span>*/}
-
-                {/*    <div className="w-full mt-auto px-8 space-y-2.5">*/}
-                {/*        <h2 className="font-dm-sans font-bold tracking-[-1.5%] text-3xl md:text-4xl lg:text-5xl text-zinc-800 text-center">Découvrez*/}
-                {/*            ce que nos utilisateurs en disent</h2>*/}
-                {/*        <p className="text-zinc-600 text-base md:text-lg lg:text-xl text-center mx-auto md:max-w-190">Nos*/}
-                {/*            utilisateurs ont testé LayzShop pour créer leur boutique en un temps <b*/}
-                {/*                className="font-medium">record.</b> Voici ce qu’ils en disent !</p>*/}
-                {/*    </div>*/}
-
-                {/*    <span className="h-50 w-px bg-gradient-to-b from-neutral-200 to-transparent"></span>*/}
-                {/*</div>*/}
 
                 <div className="mt-10 mx-20">
                     <Testimonials/>

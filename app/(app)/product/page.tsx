@@ -3,25 +3,12 @@ import {Button} from "@/src/components/Button";
 import {ProductTestimonial} from "@/src/components/ProductTestimonial";
 import {Star} from "lucide-react";
 import {StarRating} from "@/src/components/StarRating";
+import {ProductCard} from "@/src/components/ProductCard";
 
 export default function Page() {
     return (
         <main>
-            {/*<section className="grid-container">*/}
-            {/*    <div className="relative w-full">*/}
-            {/*        <span className="block h-px w-[calc(100%-12px)] bg-neutral-200"></span>*/}
-            {/*        <EllipseSeparator place="top right" />*/}
-            {/*    </div>*/}
-
-            {/*    <span className="relative text-center mx-3 pt-12 border-t border-neutral-200"></span>*/}
-
-            {/*    <div className="relative w-full">*/}
-            {/*        <span className="block h-px w-[calc(100%-12px)] bg-neutral-200 ml-auto"></span>*/}
-            {/*        <EllipseSeparator place="top left"/>*/}
-            {/*    </div>*/}
-            {/*</section>*/}
-
-            <section className="mb-20 grid-container">
+            <section className="grid-container" id="testimonial">
                 <div className="relative w-full">
                     <span className="block h-px w-[calc(100%-12px)] bg-neutral-200"></span>
                     <span className="block h-px w-[calc(100%-12px)] bg-neutral-200 absolute bottom-0"></span>
@@ -30,7 +17,7 @@ export default function Page() {
                     <EllipseSeparator place="bottom right" />
                 </div>
 
-                <div className="relative flex gap-37 text-center mx-3 py-8 px-5 border-y border-neutral-200">
+                <div className="relative flex max-md:flex-col-reverse gap-20 lg:gap-37 text-center mx-3 py-6 sm:py-8 px-3 sm:px-5 border-y border-neutral-200">
                     <div className="w-full max-w-80 text-start min-w-fit space-y-3">
                         <h2 className="font-dm-sans font-bold tracking-light text-zinc-800 text-3xl">Ce qu&#39;ils en pensent</h2>
 
@@ -76,6 +63,25 @@ export default function Page() {
                     <EllipseSeparator place="top left"/>
                     <EllipseSeparator place="bottom left"/>
                 </div>
+            </section>
+
+            <section className="mb-20 mt-3 grid-container" id="similar">
+                <span className="w-px h-full bg-gradient-to-b from-neutral-200 via-neutral-200 via-75% to-transparent ml-auto"></span>
+
+                <div className="mt-3 sm:mt-5 px-6 sm:px-8 space-y-6 sm:space-y-8">
+                    <h3 className="font-dm-sans font-bold tracking-light text-zinc-800 text-3xl">Vous pourriez aimer</h3>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-lg:gap-y-10">
+                        {[...Array(4)].map((_, i) => (
+                            <div className="flex flex-col gap-4" key={i}>
+                                <ProductCard />
+                                <Button className="w-full !border-neutral-100">Ajouter au panier</Button>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <span className="w-px h-full bg-gradient-to-b from-neutral-200 via-neutral-200 via-75% to-transparent"></span>
             </section>
         </main>
     )
