@@ -44,7 +44,7 @@ export function ModalHeader() {
                     }
                 }}
             >
-                <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-neutral-200"></div>
+                <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-neutral-200 cursor-grab"></div>
 
                 <div className="grid gap-1.5 p-4 text-center sm:text-left px-6">
                     <Link href="/" className="flex gap-2.5 items-center">
