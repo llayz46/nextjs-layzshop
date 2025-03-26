@@ -8,10 +8,13 @@ import { motion } from "motion/react";
 import {ModalHeader} from "@/src/components/ModalHeader";
 import { useModal } from "@/src/contexts/ModalContext"
 import Link from "next/link";
+import {useShoppingBag} from "@/src/contexts/ShoppingBagContext";
+import {ModalShoppingBag} from "@/src/components/ModalShoppingBag";
 
 export function AppHeader() {
     const [isScrolled, setIsScrolled] = useState(false);
     const { openModal, isOpen } = useModal();
+    const { openShoppingBag } = useShoppingBag();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -71,7 +74,9 @@ export function AppHeader() {
                             Ctrl K
                         </button>
 
-                        <ShoppingBag/>
+                        <button className="cursor-pointer" onClick={openShoppingBag}>
+                            <ShoppingBag />
+                        </button>
                     </div>
 
                     <span className="h-5 w-px bg-neutral-300" role="separator"></span>
@@ -82,12 +87,23 @@ export function AppHeader() {
                     </div>
                 </div>
 
-                <div className="lg:hidden flex items-center">
-                    <button className="cursor-pointer">
-                        <Menu className="text-zinc-800" onClick={openModal} />
+                <div className="lg:hidden flex items-center gap-3">
+                    <button
+                        className="bg-zinc-400 flex items-center gap-1 px-2 py-1 rounded-full text-zinc-50 font-medium text-xs text-nowrap">
+                        <Search size="16"/>
+                        Ctrl K
+                    </button>
+
+                    <button className="cursor-pointer" onClick={openShoppingBag}>
+                        <ShoppingBag />
+                    </button>
+
+                    <button className="cursor-pointer" onClick={openModal}>
+                        <Menu className="text-zinc-400 hover:text-zinc-600 transition-colors" />
                     </button>
 
                     <ModalHeader />
+                    <ModalShoppingBag />
                 </div>
             </motion.div>
         </header>

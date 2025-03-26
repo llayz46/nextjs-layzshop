@@ -3,6 +3,7 @@ import "../globals.css";
 import {AppHeader} from "@/src/components/AppHeader";
 import {AppFooter} from "@/src/components/AppFooter";
 import {ModalProvider} from "@/src/contexts/ModalContext";
+import {ShoppingBagProvider} from "@/src/contexts/ShoppingBagContext";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -17,7 +18,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     <span className="border-r border-neutral-200"></span>
 
                     <ModalProvider>
-                        <AppHeader />
+                        <ShoppingBagProvider>
+                            <AppHeader />
+                        </ShoppingBagProvider>
                     </ModalProvider>
 
                     <span className="border-l border-neutral-200"></span>
