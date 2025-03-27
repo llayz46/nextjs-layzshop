@@ -14,6 +14,8 @@ import RedShirt from "@/public/image/products/t-shirt/red_transparent.png";
 import BlueShirt from "@/public/image/products/t-shirt/blue_transparent.png";
 import GreenShirt from "@/public/image/products/t-shirt/green_transparent.png";
 import {useState} from "react";
+import {ButtonQuantity} from "@/src/components/ButtonQuantity";
+import {ButtonLike} from "@/src/components/ButtonLike";
 
 export default function Page() {
     const [mainImage, setMainImage] = useState(WhiteShirt);
@@ -75,16 +77,11 @@ export default function Page() {
                             </div>
 
                             <div className="flex gap-3 items-center">
-                                <button className="flex items-center gap-2 pl-3 py-3 pr-1.5 border border-neutral-200 rounded-lg">
-                                    <span className="text-xs text-zinc-800">1</span>
-                                    <ChevronsUpDown className="text-zinc-600" size={14} />
-                                </button>
+                                <ButtonQuantity />
 
                                 <Button size='lg' variant="secondary" className="px-8 lg:px-12">Ajouter au panier</Button>
 
-                                <button className="p-3 border border-neutral-200 rounded-lg">
-                                    <Heart className="text-zinc-800" size={16}  />
-                                </button>
+                                <ButtonLike />
                             </div>
 
                             <ProductFaqAccordion />

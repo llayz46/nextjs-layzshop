@@ -58,7 +58,7 @@ export function AppHeader() {
 
                     <nav className="hidden lg:block">
                         <ul className="text-sm text-zinc-600 flex gap-2.5">
-                            <li><a href="#">Nouveautés</a></li>
+                            <li><Link href="/products">Nouveautés</Link></li>
                             <li><a href="#">Tendances</a></li>
                             <li><a href="#">Catégories</a></li>
                             <li><a href="#">Promotions</a></li>

@@ -56,7 +56,7 @@ export function ModalHeader() {
 
                     <nav>
                         <ul className="mt-7 text-left text-zinc-800 font-medium">
-                            <li className="my-3">Nouveautés</li>
+                            <li className="my-3"><Link href="/products">Nouveautés</Link></li>
                             <li className="my-3">Tendances</li>
                             <li className="my-3">Catégories</li>
                             <li className="my-3">Promotions</li>

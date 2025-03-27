@@ -35,8 +35,7 @@ export function ModalShoppingBag() {
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
-                transition={{ ease: "easeInOut", duration: 0.25 }}
-                onClick={() => closeShoppingBag()}>
+                transition={{ ease: "easeInOut", duration: 0.25 }}>
                 <div className="p-6 h-full flex flex-col justify-between">
                     <div className="flex justify-between items-center">
                         <h3 className="font-dm-sans text-zinc-800 text-lg font-medium">Panier</h3>
