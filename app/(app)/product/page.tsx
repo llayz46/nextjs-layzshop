@@ -4,7 +4,7 @@ import {EllipseSeparator} from "@/src/components/EllipseSeparator";
 import {Button} from "@/src/components/Button";
 import {ProductTestimonial} from "@/src/components/ProductTestimonial";
 import {ProductFaqAccordion} from "@/src/components/ProductFaqAccordion";
-import {ChevronsUpDown, Heart, Star} from "lucide-react";
+import {Star} from "lucide-react";
 import {StarRating} from "@/src/components/StarRating";
 import {ProductCard} from "@/src/components/ProductCard";
 import {Breadcrumb} from "@/src/components/Breadcrumb";
